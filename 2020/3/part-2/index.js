@@ -1,9 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-const regexp = /([0-9]+)-([0-9]+) ([A-z]): ([A-z]+)/g;
-
-
 fs.readFile(path.resolve(__dirname, "../resources/slope.txt"), "utf8", (err, contents) => {
   let entries = contents.split("\n")
     .filter(i => i !== "");
